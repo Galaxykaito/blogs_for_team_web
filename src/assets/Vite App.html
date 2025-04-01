@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:5173/member/1 -->
+<html lang="" style="--vueuse-safe-area-top: env(safe-area-inset-top, 0px); --vueuse-safe-area-right: env(safe-area-inset-right, 0px); --vueuse-safe-area-bottom: env(safe-area-inset-bottom, 0px); --vueuse-safe-area-left: env(safe-area-inset-left, 0px);"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module" src="./Vite App_files/virtual_vue-devtools-path_overlay.js.下载"></script>
+    <script type="module" src="./Vite App_files/virtual_vue-inspector-path_load.js.下载"></script>
+
+    <script type="module" src="./Vite App_files/client"></script>
+
+    
+    <link rel="icon" href="http://localhost:5173/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  <link rel="stylesheet" href="./Vite App_files/devtools-overlay.css"><style type="text/css" data-vite-dev-id="E:/音频素材/untitled/node_modules/vite-plugin-vue-inspector/src/Overlay.vue?vue&amp;type=style&amp;index=0&amp;scoped=31d1379f&amp;lang.css">
+.vue-inspector-container[data-v-31d1379f] {
+  cursor: pointer;
+  position: fixed;
+  text-align: center;
+  z-index: 2147483647;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.vue-inspector-card[data-v-31d1379f] {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px 8px;
+  border-radius: 4px;
+  text-align: left;
+  color:#e9e9e9;
+  font-size: 14px;
+  background-color:#42b883;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+.vue-inspector-card .tip[data-v-31d1379f] {
+  font-size: 11px;
+  opacity: 0.7;
+}
+.vue-inspector-banner[data-v-31d1379f] {
+  display: none;
+  position: absolute;
+  margin: 0;
+  width: 260px;
+  text-decoration: none;
+}
+.vue-inspector-container:hover .vue-inspector-banner[data-v-31d1379f] {
+  display: block;
+}
+.vue-inspector-container--disabled:hover .vue-inspector-banner[data-v-31d1379f] {
+  display: none;
+}
+.vue-inspector-floats[data-v-31d1379f] {
+  z-index: 2147483647;
+  position: fixed;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.vue-inspector-size-indicator[data-v-31d1379f] {
+  z-index: 2147483646;
+  position: fixed;
+  background-color:#42b88325;
+  border: 1px solid #42b88350;
+  border-radius: 5px;
+  pointer-events: none;
+}
+.vue-inspector-animated[data-v-31d1379f] {
+  transition: all 0.1s ease-in;
+}
+@media (prefers-reduced-motion) {
+.vue-inspector-animated[data-v-31d1379f] {
+    transition: none !important;
+}
+}
+</style><style type="text/css" data-vite-dev-id="E:/音频素材/untitled/src/views/home.vue?vue&amp;type=style&amp;index=0&amp;scoped=40f7d07e&amp;lang.css">
+.home-container[data-v-40f7d07e] {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.background-video[data-v-40f7d07e] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.9;
+}
+.content-layer[data-v-40f7d07e] {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.unmute-btn[data-v-40f7d07e] {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.9);
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+.unmute-btn[data-v-40f7d07e]:hover {
+  background: #e74c3c;
+  color: white;
+  transform: scale(1.05);
+}
+.welcome-title[data-v-40f7d07e] {
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+  text-shadow: 0 4px 8px rgba(231, 76, 60, 0.5);
+  font-weight: 500;
+  letter-spacing: 2px;
+  position: relative;
+}
+.welcome-title[data-v-40f7d07e]::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  margin: 20px auto 0;
+  opacity: 0.9;
+}
+.members-grid[data-v-40f7d07e] {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.member-card[data-v-40f7d07e] {
+  position: relative;
+  background: rgba(18, 18, 18, 0.85); /* 保持高级黑 */
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  backdrop-filter: blur(8px);
+}
+.member-card[data-v-40f7d07e]:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(231, 76, 60, 0.3);
+  border-color: rgba(231, 76, 60, 0.5);
+}
+
+/* 红白色系流光效果 */
+.card-glow[data-v-40f7d07e] {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    rgba(231, 76, 60, 0.4),
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.7s;
+  z-index: -1;
+}
+.member-card:hover .card-glow[data-v-40f7d07e] {
+  left: 100%;
+}
+
+/* 红白色系鼠标跟随高光 */
+.card-highlight[data-v-40f7d07e] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.15),
+    transparent 50%
+  );
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: -1;
+}
+.member-card:hover .card-highlight[data-v-40f7d07e] {
+  opacity: 1;
+}
+
+/* 头像样式 - 红白边框 */
+.member-avatar[data-v-40f7d07e] {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+  filter: brightness(0.95);
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+.member-card:hover .member-avatar[data-v-40f7d07e] {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+  border-color: #e74c3c;
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+}
+
+/* 成员名字样式 - 红白色系 */
+.member-name[data-v-40f7d07e] {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+.member-name[data-v-40f7d07e]::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e74c3c;
+  transition: width 0.3s ease;
+}
+.member-card:hover .member-name[data-v-40f7d07e] {
+  color: white;
+  text-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+.member-card:hover .member-name[data-v-40f7d07e]::after {
+  width: 100%;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+.members-grid[data-v-40f7d07e] {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+.welcome-title[data-v-40f7d07e] {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+}
+.member-avatar[data-v-40f7d07e] {
+    width: 120px;
+    height: 120px;
+}
+}
+@media (max-width: 640px) {
+.members-grid[data-v-40f7d07e] {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+}
+.welcome-title[data-v-40f7d07e] {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+.content-layer[data-v-40f7d07e] {
+    padding: 40px 20px;
+}
+.member-avatar[data-v-40f7d07e] {
+    width: 100px;
+    height: 100px;
+}
+.member-name[data-v-40f7d07e] {
+    font-size: 1.1rem;
+}
+}
+
+/* 卡片入场动画 - 红白色系 */
+@keyframes cardEntrance-40f7d07e {
+from {
+    opacity: 0;
+    transform: translateY(30px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+.member-card[data-v-40f7d07e] {
+  animation: cardEntrance-40f7d07e 0.6s ease-out both;
+}
+.member-card[data-v-40f7d07e]:nth-child(1) { animation-delay: 0.1s;
+}
+.member-card[data-v-40f7d07e]:nth-child(2) { animation-delay: 0.2s;
+}
+.member-card[data-v-40f7d07e]:nth-child(3) { animation-delay: 0.3s;
+}
+.member-card[data-v-40f7d07e]:nth-child(4) { animation-delay: 0.4s;
+}
+</style><style type="text/css" data-vite-dev-id="E:/音频素材/untitled/node_modules/highlight.js/styles/github.css">pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}</style><style type="text/css" data-vite-dev-id="E:/音频素材/untitled/src/views/Member.vue?vue&amp;type=style&amp;index=0&amp;scoped=715f58d3&amp;lang.css">
+/* 基础样式 */
+[data-v-715f58d3] {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body[data-v-715f58d3] {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f2f3; /* 淡粉色背景 */
+  background-image: url('/src/assets/巴别塔.png'); /* 替换为你的背景图片路径 */
+  background-size: cover; /* 使图片覆盖整个背景 */
+  background-position: center; /* 将图片居中 */
+  background-repeat: no-repeat; /* 防止图片重复 */
+  background-attachment: fixed; /* 使背景固定，不随滚动条滚动 */
+}
+.member-container[data-v-715f58d3] {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+.back-btn[data-v-715f58d3] {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(231, 76, 60, 0.9);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.back-btn[data-v-715f58d3]:hover {
+  transform: translateX(5px);
+}
+.back-arrow[data-v-715f58d3] {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.back-btn:hover .back-arrow[data-v-715f58d3] {
+  transform: translateX(-3px);
+}
+
+/* 头部信息 */
+.member-header[data-v-715f58d3] {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background: whitesmoke;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.particles-container[data-v-715f58d3] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%; /* 占据右侧40%宽度 */
+  height: 100%;
+  z-index: 0;
+}
+
+/* 粒子动画效果 */
+.particles-container[data-v-715f58d3]::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 50%,
+      rgba(255, 200, 200, 0.8),
+      transparent 70%),
+    radial-gradient(circle at 70% 30%,
+    rgba(239, 48, 134, 0.37),
+      transparent 70%),
+    radial-gradient(circle at 50% 80%,
+      rgba(255, 150, 150, 0.9),
+      transparent 70%);
+  background-size: 200% 200%;
+  animation: particleFlow-715f58d3 8s infinite alternate ease-in-out;
+  opacity: 0.3;
+  filter:
+    blur(15px)
+    contrast(120%)
+    brightness(120%);
+  mix-blend-mode: screen;
+}
+@keyframes particleFlow-715f58d3 {
+0% {
+    background-position: 0% 0%;
+    opacity: 0.3;
+}
+50% {
+    opacity: 0.5;
+}
+100% {
+    background-position: 100% 100%;
+    opacity: 0.3;
+}
+}
+.header-avatar[data-v-715f58d3] {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 25px;
+  border: 3px solid #e74c3c;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+.header-info h1[data-v-715f58d3] {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+.member-bio[data-v-715f58d3] {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 主体布局 */
+.member-main[data-v-715f58d3] {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* 名片式导航栏 */
+.nav-sidebar[data-v-715f58d3] {
+  width: 250px;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.nav-item[data-v-715f58d3] {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.nav-item[data-v-715f58d3]:hover {
+  background: #f8f8f8;
+}
+.nav-item.active[data-v-715f58d3] {
+  background: #e74c3c;
+  color: white;
+}
+.tab-number[data-v-715f58d3] {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 15px;
+  opacity: 0.7;
+}
+.tab-title[data-v-715f58d3] {
+  font-size: 16px;
+  font-weight: 500;
+  flex-grow: 1;
+}
+.tab-subtitle[data-v-715f58d3] {
+  font-size: 12px;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+/* 内容区域 */
+.content-area[data-v-715f58d3] {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+.tab-content h2[data-v-715f58d3] {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* 文章卡片 */
+.article-card[data-v-715f58d3], .story-card[data-v-715f58d3] {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.article-card h3[data-v-715f58d3], .story-card h3[data-v-715f58d3] {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #222;
+}
+.meta[data-v-715f58d3], .story-meta[data-v-715f58d3] {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 12px;
+}
+.story-meta[data-v-715f58d3] {
+  display: flex;
+  justify-content: space-between;
+}
+.markdown-preview[data-v-715f58d3] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #555;
+  margin: 15px 0;
+  font-size: 15px;
+}
+.read-more[data-v-715f58d3] {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.read-more[data-v-715f58d3]:hover {
+  background: #c0392b;
+}
+
+/* 分页控制 */
+.pagination-controls[data-v-715f58d3] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+.pagination-controls button[data-v-715f58d3] {
+  padding: 6px 12px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pagination-controls button[data-v-715f58d3]:hover:not(:disabled) {
+  background: #e0e0e0;
+}
+.pagination-controls button[data-v-715f58d3]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 照片网格 */
+.photo-grid[data-v-715f58d3] {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.photo-item[data-v-715f58d3] {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.photo-item[data-v-715f58d3]:hover {
+  transform: scale(1.03);
+}
+.photo-item img[data-v-715f58d3] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 音乐列表 */
+.music-list[data-v-715f58d3] {
+  margin-top: 20px;
+}
+.music-item[data-v-715f58d3] {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+.music-item[data-v-715f58d3]:hover {
+  background: #f8f8f8;
+}
+.album-cover[data-v-715f58d3] {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+.song-info[data-v-715f58d3] {
+  flex: 1;
+}
+.song-info h3[data-v-715f58d3] {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+.song-info p[data-v-715f58d3] {
+  font-size: 13px;
+  color: #888;
+}
+.play-btn[data-v-715f58d3] {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* 视频列表 */
+.video-list[data-v-715f58d3] {
+  margin-top: 20px;
+}
+.video-item[data-v-715f58d3] {
+  margin-bottom: 20px;
+}
+.video-thumbnail[data-v-715f58d3] {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.video-info h3[data-v-715f58d3] {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.video-info p[data-v-715f58d3] {
+  font-size: 14px;
+  color: #666;
+}
+.game-list[data-v-715f58d3] {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game-item[data-v-715f58d3] {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: #f9f9f9;
+  width: 70%; /* 限制宽度，确保居中 */
+  text-align: left; /* 内容左对齐 */
+}
+
+
+/* 模态框 */
+.article-modal[data-v-715f58d3], .photo-viewer[data-v-715f58d3] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.story-modal[data-v-715f58d3] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.modal-content[data-v-715f58d3] {
+  background: #edd5c4;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+}
+.close-btn[data-v-715f58d3] {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+.close-btn[data-v-715f58d3]:hover {
+  color: #333;
+}
+.markdown-content[data-v-715f58d3] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  margin-top: 20px;
+}
+.markdown-content h1[data-v-715f58d3],
+.markdown-content h2[data-v-715f58d3],
+.markdown-content h3[data-v-715f58d3] {
+  margin: 1.5em 0 1em;
+  font-weight: 600;
+}
+.markdown-content pre[data-v-715f58d3] {
+  background: #f6f8fa;
+  padding: 16px;
+  border-radius: 3px;
+  overflow: auto;
+}
+
+/* 照片查看器 */
+.viewer-image[data-v-715f58d3] {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+.nav-btn[data-v-715f58d3] {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-btn[data-v-715f58d3]:hover {
+  background: rgba(0,0,0,0.8);
+}
+.prev[data-v-715f58d3] {
+  left: 30px;
+}
+.next[data-v-715f58d3] {
+  right: 30px;
+}
+
+/* 加载动画 */
+.loading-spinner[data-v-715f58d3] {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #e74c3c;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin-715f58d3 1s linear infinite;
+  margin: 40px auto;
+}
+@keyframes spin-715f58d3 {
+0% { transform: rotate(0deg);
+}
+100% { transform: rotate(360deg);
+}
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+.member-main[data-v-715f58d3] {
+    flex-direction: column;
+}
+.nav-sidebar[data-v-715f58d3] {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav-item[data-v-715f58d3] {
+    width: 48%;
+    margin-bottom: 10px;
+}
+.content-area[data-v-715f58d3] {
+    padding: 20px;
+}
+.article-modal[data-v-715f58d3], .photo-viewer[data-v-715f58d3] {
+    padding: 20px;
+}
+.modal-content[data-v-715f58d3] {
+    padding: 20px;
+}
+}
+@media (max-width: 480px) {
+.member-header[data-v-715f58d3] {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+.header-avatar[data-v-715f58d3] {
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+.nav-item[data-v-715f58d3] {
+    width: 100%;
+}
+.photo-grid[data-v-715f58d3] {
+    grid-template-columns: repeat(2, 1fr);
+}
+.video-wrapper[data-v-715f58d3] {
+  position: relative;
+}
+.video-play-btn[data-v-715f58d3] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+.video-play-btn[data-v-715f58d3]:hover {
+  background: rgba(0,0,0,0.9);
+}
+}
+</style></head>
+  <body>
+    <div id="app" data-v-app=""><div data-v-715f58d3="" class="member-container"><button data-v-715f58d3="" class="back-btn">← 返回主页</button><div data-v-715f58d3="" class="member-header"><img data-v-715f58d3="" src="./Vite App_files/tlsy.png" class="header-avatar"><div data-v-715f58d3="" class="header-info"><h1 data-v-715f58d3="">黄德祥/Tachyon</h1><p data-v-715f58d3="" class="member-bio">开发者 | 音乐爱好者 | 故事写手|🔺▢粥批 | 原批铁批</p></div><!-- 添加粒子动画容器 --><div data-v-715f58d3="" class="particles-container"></div></div><div data-v-715f58d3="" class="member-main"><!-- 左侧名片式导航栏 --><div data-v-715f58d3="" class="nav-sidebar"><div data-v-715f58d3="" class="nav-item active"><span data-v-715f58d3="" class="tab-number">01</span><span data-v-715f58d3="" class="tab-title">文章</span><span data-v-715f58d3="" class="tab-subtitle">Articles</span></div><div data-v-715f58d3="" class="nav-item"><span data-v-715f58d3="" class="tab-number">02</span><span data-v-715f58d3="" class="tab-title">故事</span><span data-v-715f58d3="" class="tab-subtitle">Stories</span></div><div data-v-715f58d3="" class="nav-item"><span data-v-715f58d3="" class="tab-number">03</span><span data-v-715f58d3="" class="tab-title">照片</span><span data-v-715f58d3="" class="tab-subtitle">Photos</span></div><div data-v-715f58d3="" class="nav-item"><span data-v-715f58d3="" class="tab-number">04</span><span data-v-715f58d3="" class="tab-title">歌单</span><span data-v-715f58d3="" class="tab-subtitle">Playlist</span></div><div data-v-715f58d3="" class="nav-item"><span data-v-715f58d3="" class="tab-number">05</span><span data-v-715f58d3="" class="tab-title">视频</span><span data-v-715f58d3="" class="tab-subtitle">Videos</span></div><div data-v-715f58d3="" class="nav-item"><span data-v-715f58d3="" class="tab-number">06</span><span data-v-715f58d3="" class="tab-title">玩的游戏</span><span data-v-715f58d3="" class="tab-subtitle">Games</span></div></div><!-- 右侧内容区 --><div data-v-715f58d3="" class="content-area"><!-- 文章栏目 --><div data-v-715f58d3="" class="tab-content" style=""><h2 data-v-715f58d3="">代码作品与文章</h2><div data-v-715f58d3="" class="pagination-controls"><button data-v-715f58d3="" disabled="">上一页</button><span data-v-715f58d3="">第 1 页 / 共 1 页</span><button data-v-715f58d3="" disabled="">下一页</button></div><div data-v-715f58d3="" class="article-list"><div data-v-715f58d3="" class="article-card"><h3 data-v-715f58d3="">QQbot-cos安全总监德穆兰</h3><p data-v-715f58d3="" class="meta">发布于 2025-03-18 · 256次浏览</p><div data-v-715f58d3="" class="markdown-preview"><p>本文介绍了nonebot2和napcat结合的QQbot用来cos安全总监德穆兰...</p>
+</div><button data-v-715f58d3="" class="read-more">阅读全文</button></div><div data-v-715f58d3="" class="article-card"><h3 data-v-715f58d3="">GPT-SOVITS云端训练</h3><p data-v-715f58d3="" class="meta">发布于 2023-03-22 · 189次浏览</p><div data-v-715f58d3="" class="markdown-preview"><p>GPT-SOVITS云端训练语音合成模型的方法...</p>
+</div><button data-v-715f58d3="" class="read-more">阅读全文</button></div></div></div><!-- 故事栏目 --><div data-v-715f58d3="" class="tab-content" style="display: none;"><h2 data-v-715f58d3="">原创故事集</h2><div data-v-715f58d3="" class="pagination-controls"><button data-v-715f58d3="" disabled="">上一页</button><span data-v-715f58d3="">第 1 页 / 共 1 页</span><button data-v-715f58d3="" disabled="">下一页</button></div><div data-v-715f58d3="" class="story-list"><div data-v-715f58d3="" class="story-card"><h3 data-v-715f58d3="">原批</h3><div data-v-715f58d3="" class="markdown-preview"><p>那是一个雨夜，我启动了原神，成为了原批...</p>
+</div><div data-v-715f58d3="" class="story-meta"><span data-v-715f58d3="">3200字</span><span data-v-715f58d3="">2023-06-10</span></div><button data-v-715f58d3="" class="read-more">阅读全文</button></div></div></div><!-- 照片栏目 --><div data-v-715f58d3="" class="tab-content" style="display: none;"><h2 data-v-715f58d3="">照片集</h2><div data-v-715f58d3="" class="pagination-controls"><button data-v-715f58d3="" disabled="">上一页</button><span data-v-715f58d3="">第 1 页 / 共 1 页</span><button data-v-715f58d3="" disabled="">下一页</button></div><div data-v-715f58d3="" class="photo-grid"><div data-v-715f58d3="" class="photo-item"><img data-v-715f58d3="" src="./Vite App_files/tlsy.png" alt="照片"></div><div data-v-715f58d3="" class="photo-item"><img data-v-715f58d3="" src="./Vite App_files/巴别塔.png" alt="照片"></div><div data-v-715f58d3="" class="photo-item"><img data-v-715f58d3="" src="./Vite App_files/member1.jpg" alt="照片"></div><div data-v-715f58d3="" class="photo-item"><img data-v-715f58d3="" src="./Vite App_files/abln.png" alt="照片"></div><div data-v-715f58d3="" class="photo-item"><img data-v-715f58d3="" src="./Vite App_files/gzh.png" alt="照片"></div><div data-v-715f58d3="" class="photo-item"><img data-v-715f58d3="" src="./Vite App_files/sy.png" alt="照片"></div></div></div><!-- 歌单栏目 --><div data-v-715f58d3="" class="tab-content" style="display: none;"><h2 data-v-715f58d3="">我的歌单</h2><!--v-if--><div data-v-715f58d3="" class="music-list"><div data-v-715f58d3="" class="music-item"><img data-v-715f58d3="" src="./Vite App_files/巴别塔.png" class="album-cover"><div data-v-715f58d3="" class="song-info"><h3 data-v-715f58d3="">The Opening</h3><p data-v-715f58d3="">塞壬唱片_MSR · 3:45</p></div><button data-v-715f58d3="" class="play-btn">播放</button></div><div data-v-715f58d3="" class="music-item"><img data-v-715f58d3="" src="./Vite App_files/巴别塔.png" class="album-cover"><div data-v-715f58d3="" class="song-info"><h3 data-v-715f58d3="">Founding Stone</h3><p data-v-715f58d3="">塞壬唱片_MSR · 4:12</p></div><button data-v-715f58d3="" class="play-btn">播放</button></div><div data-v-715f58d3="" class="music-item"><img data-v-715f58d3="" src="./Vite App_files/gzh.png" class="album-cover"><div data-v-715f58d3="" class="song-info"><h3 data-v-715f58d3="">相见欢</h3><p data-v-715f58d3="">塞壬唱片_MSR · 4:12</p></div><button data-v-715f58d3="" class="play-btn">播放</button></div></div></div><!-- 视频栏目 --><div data-v-715f58d3="" class="tab-content" style="display: none;"><h2 data-v-715f58d3="">视频</h2><div data-v-715f58d3="" class="pagination-controls"><button data-v-715f58d3="" disabled="">上一页</button><span data-v-715f58d3="">第 1 页 / 共 2 页</span><button data-v-715f58d3="">下一页</button></div><div data-v-715f58d3="" class="video-list"><div data-v-715f58d3="" class="video-item"><video data-v-715f58d3="" poster="/src/assets/member1.jpg" class="video-thumbnail"><source data-v-715f58d3="" src="/src/assets/brokensun.mp4" type="video/mp4"> 您的浏览器不支持 HTML5 视频。 </video><div data-v-715f58d3="" class="video-info"><h3 data-v-715f58d3="">爆裂黎明</h3><p data-v-715f58d3="">多喝六个核桃~</p><button data-v-715f58d3="" class="play-btn">暂停</button></div></div></div></div><!-- 游戏栏目 --><div data-v-715f58d3="" class="tab-content" style="display: none;"><h2 data-v-715f58d3="">我的游戏</h2><div data-v-715f58d3="" class="game-list"><div data-v-715f58d3="" class="game-item"><h3 data-v-715f58d3="">明日方舟</h3><p data-v-715f58d3="">游戏内ID: 417827950 欧#3339</p><p data-v-715f58d3="">描述: 入职日2019-9-15 阿斯卡纶，特蕾西娅厨</p></div><div data-v-715f58d3="" class="game-item"><h3 data-v-715f58d3="">三角洲行动</h3><p data-v-715f58d3="">游戏内ID: 哈夫克阴六兵</p><p data-v-715f58d3="">描述: 战场烽火双修，我说我厨老太你信吗？</p></div></div></div></div><!-- 故事弹窗 --><!--v-if--><!-- 文章弹窗 --><!--v-if--><!-- 照片查看器 --><!--v-if--></div></div></div>
+    <script type="module" src="./Vite App_files/main.js.下载"></script>
+  
+
+<script src="./Vite App_files/devtools-overlay.mjs" type="module"></script><div id="vue-inspector-container" data-v-app=""><div data-v-31d1379f="" data-v-inspector-ignore="true"><!--v-if--><!-- Overlay --><!--v-if--></div></div><div id="__vue-devtools-container__" data-v-inspector-ignore="true" data-v-app=""><div data-v-640ec535="" class="vue-devtools__anchor vue-devtools__anchor--hide" style="left: 764px; top: 714px; --vue-devtools-widget-bg: #ffffff; --vue-devtools-widget-fg: #111; --vue-devtools-widget-border: #efefef; --vue-devtools-widget-shadow: rgba(128,128,128,0.1);"><div data-v-640ec535="" class="vue-devtools__anchor--glowing" style=""></div><div data-v-640ec535="" class="vue-devtools__panel" style="transform: translate(-50%, calc(-50% + 15px)); border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;"><div data-v-640ec535="" class="vue-devtools__anchor-btn panel-entry-btn" title="Toggle Vue DevTools" aria-label="Toggle devtools panel" style="filter: saturate(0);"><svg data-v-640ec535="" viewBox="0 0 256 198" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-640ec535="" fill="#41B883" d="M204.8 0H256L128 220.8L0 0h97.92L128 51.2L157.44 0h47.36Z"></path><path data-v-640ec535="" fill="#41B883" d="m0 0l128 220.8L256 0h-51.2L128 132.48L50.56 0H0Z"></path><path data-v-640ec535="" fill="#35495E" d="M50.56 0L128 133.12L204.8 0h-47.36L128 51.2L97.92 0H50.56Z"></path></svg></div><div data-v-640ec535="" class="vue-devtools__panel-content vue-devtools__panel-divider"></div><div data-v-640ec535="" class="vue-devtools__anchor-btn vue-devtools__panel-content vue-devtools__inspector-button active" title="Toggle Component Inspector"><svg data-v-640ec535="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 1.1em; width: 1.1em; opacity: 1; color: rgb(0, 220, 130);"><g data-v-640ec535="" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle data-v-640ec535="" cx="12" cy="12" r=".5" fill="currentColor"></circle><path data-v-640ec535="" d="M5 12a7 7 0 1 0 14 0a7 7 0 1 0-14 0m7-9v2m-9 7h2m7 7v2m7-9h2"></path></g></svg></div></div><div data-v-399f5059="" data-v-640ec535="" class="vue-devtools-frame" style="z-index: -1; pointer-events: auto; width: min(80vw, -48px + 100vw); height: min(60vh, -48px + 100vh); left: 0px; transform: translate(-50%, 0px); bottom: 0px; display: none;"><div data-v-399f5059="" class="vue-devtools-resize vue-devtools-resize--horizontal" style="top: 0px;"></div><div data-v-399f5059="" class="vue-devtools-resize vue-devtools-resize--horizontal" style="bottom: 0px; display: none;"></div><div data-v-399f5059="" class="vue-devtools-resize vue-devtools-resize--vertical" style="left: 0px;"></div><div data-v-399f5059="" class="vue-devtools-resize vue-devtools-resize--vertical" style="right: 0px;"></div><div data-v-399f5059="" class="vue-devtools-resize vue-devtools-resize-corner" style="top: 0px; left: 0px; cursor: nwse-resize;"></div><div data-v-399f5059="" class="vue-devtools-resize vue-devtools-resize-corner" style="top: 0px; right: 0px; cursor: nesw-resize;"></div><div data-v-399f5059="" class="vue-devtools-resize vue-devtools-resize-corner" style="bottom: 0px; left: 0px; cursor: nesw-resize; display: none;"></div><div data-v-399f5059="" class="vue-devtools-resize vue-devtools-resize-corner" style="bottom: 0px; right: 0px; cursor: nwse-resize; display: none;"></div></div></div></div></body></html>
